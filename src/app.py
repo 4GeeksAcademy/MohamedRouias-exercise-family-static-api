@@ -38,7 +38,7 @@ def handle_hello():
 
 
 @app.route('/members/<int:member_id>', methods=['GET'])
-def get_single_member(member_id):
+def get_the_member(member_id):
     the_member = jackson_family.get_member(member_id)
     if the_member:
        return jsonify(the_member), 200
